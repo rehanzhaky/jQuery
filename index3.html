@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler jQuery</title>
+  </head>
+  <body>
+    <h1>Ini adalah makanan kesukaanmu</h1>
+    <ul class="makanan">
+      <li id="nasgor">
+        Nasgor <button id="likeButton">Klik kalau kamu suka</button>
+        <button id="dislikeButton">X</button>
+      </li>
+      <li id="rotibakar">
+        Roti Bakar <button id="likeRotiBakar">suka</button>
+      </li>
+      <li id="baso">Baso</li>
+    </ul>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#likeButton").on("click", function () {
+          alert("Aku suka banget makan nasi goreng");
+        });
+        $("#dislikeButton").on("click", function () {
+          $("#nasgor").remove();
+          alert("Pilihan nasi goreng telah dihapus");
+        });
+        $("#likeRotiBakar").on("dblclick", function () {
+          alert("aku lebih suka roti bakar");
+        });
+      });
+    </script>
+  </body>
+</html>
