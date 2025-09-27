@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation jQuery</title>
+  </head>
+  <body>
+    <h1>Halo, kamu sedang belajar apa?</h1>
+    <ul class="learn">
+      <li>jQuery</li>
+      <li>j-rocks</li>
+      <li>project pop</li>
+    </ul>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let extraParagraph = $("<p>pilih salah satu saja ya</p>");
+        let extraLanguage = $("<li>PHP</li>");
+        $(".learn").before(extraParagraph);
+        $(".learn").after("<p>terimakasih sudah memilih</p>")
+        $(".learn").prepend(extraLanguage)
+        $(".learn").append('<li>Typescript</li>')
+      });
+    </script>
+  </body>
+</html>
